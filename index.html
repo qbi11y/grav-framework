@@ -2,27 +2,33 @@
 <html lang="en" ng-app="Framework">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Gravitant UI Framework</title>
     <!--Site Icon-->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!--Font references-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
     <link id="gravitant-fonts-css" media="all" type="text/css" href="http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2" rel="stylesheet">
-    <link href="assets/fonts/frutiger.css" rel="stylesheet" />
+    <link href="css/fonts/frutiger.css" rel="stylesheet" />
 
     <!--Icons-->
-    <link rel="stylesheet" href="assets/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!--Gravitant Theme-->
-    <link href="assets/gravitant-toolkit.css" rel="stylesheet" />
+    <link href="css/gravitant-toolkit.css" rel="stylesheet" />
+    <link href="css/grav-framework-site-styles.css" rel="stylesheet" />
 
     <!--Script Libraries-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
     <script src="packages/angular-route/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script src="js/gravitant-toolkit.min.js"></script>
+    <script src="js/grav-controllers-ng.js"></script>
     <script src="js/framework-ng.js"></script>
     <script src="js/framework-routing-ng.js"></script>
 
@@ -34,7 +40,7 @@
     </style>
 </head>
 <body id="gravitant-toolkit">
-    <div class="page-wrapper">
+    <div>
 
         <header>
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -48,7 +54,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="" href="index.html">
-                            <img src="assets/images/gravitant_g.png" alt="logo" style="max-height: 55px;" />
+                            <img src="images/gravitant_g.png" alt="logo" style="max-height: 55px;" />
                         </a>
                         <!--                        <a class="" href="index.html">
                                                             <img src="../../resources/images/Wolters-Kluwer-logo.jpg" alt="logo" style="max-height: 55px; max-width: 150px;" />
@@ -72,15 +78,6 @@
         <section class="container">
             <div ng-view></div>
         </section>
-        <footer>
-            <div class="container">
-                <ul class="list-unstyled list-inline">
-                    <li class="pull-right">
-                        <img src="assets/images/powered_by_gravitant.png" alt="footer logo" />
-                    </li>
-                </ul>
-            </div>
-        </footer>
     </div>
 
 </body>

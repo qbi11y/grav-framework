@@ -1,0 +1,15 @@
+.affix {
+	position: static;
+}
+
+pre {
+	margin-bottom: 10em;
+	height: auto;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 992px) {
+	.affix {
+		position: fixed;
+	}
+}

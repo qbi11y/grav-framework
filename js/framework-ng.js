@@ -1,4 +1,4 @@
-var app = angular.module('Controllers', []);
+var app = angular.module('Controllers', ['ui.bootstrap.demo']);
 
 app.run(['$anchorScroll', function($anchorScroll) {
     $anchorScroll.yOffset = 60; // always scroll by 50 extra pixels
