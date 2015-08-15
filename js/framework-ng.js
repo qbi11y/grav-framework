@@ -4,10 +4,16 @@ app.run(['$anchorScroll', function($anchorScroll) {
     $anchorScroll.yOffset = 60; // always scroll by 50 extra pixels
 }]);
 
+app.run(function($rootScope) {
+    $rootScope.data = {
+        theme: 'gravitant-toolkit'
+    };
+});
+
 app.controller('MainController', ['$scope', '$http', '$location', '$anchorScroll', function($scope, $http, $location, $anchorScroll) {
 
     console.log();
-
+   
     $scope.activeNav = $location.$$url;
 
     $scope.updateNav = function (active) {

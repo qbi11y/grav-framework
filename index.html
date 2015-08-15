@@ -15,8 +15,11 @@
     <!--Icons-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!--Gravitant Theme-->
-    <link href="css/gravitant-toolkit.css" rel="stylesheet" />
+    <!--Theme Selection-->
+    <link ng-if="!data.theme || data.theme == 'gravitant-toolkit'" href="css/gravitant-toolkit.css" rel="stylesheet" />
+    <link ng-if="data.theme == 'gravitant-toolkit-alt'" href="css/gravitant-toolkit-alt.css" rel="stylesheet" />
+
+    <!-- Toolkit Theme -->
     <link href="css/grav-framework-site-styles.css" rel="stylesheet" />
 
     <!--Script Libraries-->
@@ -69,6 +72,11 @@
                             <li ng-class="{active: activeNav == '/elements'}"><a href="#/elements" ng-click="updateNav('/elements')">Elements</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <select class="navbar-text" ng-model="$root.data.theme">
+                                    <option value="gravitant-toolkit">Gravitant Default</option>
+                                    <option value="gravitant-toolkit-alt">Gravitant Alternate</option>
+                                </select></li>
                             <li><a href="#">Feedback</a></li>
                         </ul>
                     </div>
