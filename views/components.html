@@ -8,6 +8,7 @@
                 <li><a ng-click="scrollTo('filter')">Filter</a></li>
                 <li><a ng-click="scrollTo('search')">Search</a></li>
                 <li><a ng-click="scrollTo('breadcrumb')">Breadcrumb</a></li>
+                <li><a ng-click="scrollTo('pagetemplate')">Page Template</a></li>
                 <li><a ng-click="scrollTo('header')">Header</a></li>
                 <li><a ng-click="scrollTo('footer')">Footer</a></li>
             </ul>
@@ -35,6 +36,7 @@
                         <div class="dropdown" id="optionList">
                             <button class="btn btn-default dropdown-toggle" type="button" id="Button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 Option 1 
+                               
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -64,6 +66,7 @@
                         <div class="dropdown pull-right">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 Page Actions
+                               
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -135,7 +138,6 @@
             </div>
         </div>
         <h4>Code Example</h4>
-
         <div ng-controller="TabsCtrl">
             <tabset>
                 <tab heading="HTML">&nbsp;
@@ -148,8 +150,7 @@
                 <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">{{tab.content}}</tab>-->
             </tabset>
         </div>
-        
-        
+
 
         <!-- List -->
         <h2 id="list">Expanded List</h2>
@@ -264,37 +265,218 @@
                 <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">{{tab.content}}</tab>-->
             </tabset>
         </div>
-        
+
 
         <!-- Table -->
-        <h2>Basic Table</h2>
+        <h2 id="table">Basic Table</h2>
         <p>The basic table component should be used to display tabular data. Avoid using the basic table component if the fields to be displayed are more than 7. If the fields to be displayed is greater than 7, consider using the <a href="">expanded list</a> component.</p>
         <h4>Example</h4>
-        <pre><code>Code Sample Here</code>
-		</pre>
+        <div></div>
+        <h4>Code Sample</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;HTML</tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">thymeleaf</tab>
+            </tabset>
+        </div>
 
         <!-- Filter -->
-        <h2>Filter</h2>
+        <h2 id="filter">Filter</h2>
         <p>The filter component should be used when a large dataset is returned and it would be reasonable that a user would want to filter out data to get exactly what they are looking for. The filter should be triggered in the page action bar component with the filter window being displayed below the page action bar.</p>
         <h4>Example</h4>
-        <pre><code>Code Sample Here</code>
-		</pre>
+
+        <div>
+            <div class="well well-sm">
+                <form class="form-inline clearfix">
+
+                    <div class="form-group">
+                        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#componentFilter" aria-expanded="false" aria-controls="componentFilter"><i class="fa fa-filter"></i>Filter</button>
+                    </div>
+
+
+                </form>
+            </div>
+            <form id="componentFilter" class="collapse">
+                <div class="well form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="sampleInput1" class="col-sm-4 control-label text-left">Field 1</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="Text1" placeholder="Filter Value" ng-model="data.filter1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="sampleInput2" class="col-sm-4 control-label text-left">Field 2</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="Text2" placeholder="Filter Value" ng-model="data.filter2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="list-unstyled list-inline text-right">
+                                <li>
+                                    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#componentFilter">Close</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-default" ng-click="actions.clearFilters()">Clear Filters</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#componentFilter" ng-click="actions.updateFilter()">Apply Filters</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div ng-if="data.filterItems.length > 0">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-unstyled list-inline">
+                            <li>
+                                <label>Filters </label>
+                            </li>
+                            <li ng-repeat="filter in data.filterItems">
+                                <button type="button" class="btn btn-xs btn-primary" ng-click="actions.removeFilter(filter)">{{filter.filterValue}}&nbsp;<i class="fa fa-times-circle"></i></button></li>
+                            <li>
+                                <button type="button" class="btn btn-link btn-xs" ng-click="actions.clearFilters()">Clear Filters</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="horizontal-divider"></div>
+                <br />
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-filter-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
 
         <!-- Search -->
-        <h2>Search</h2>
+        <h2 id="search">Search</h2>
         <p>The search component should be used when a large dataset is returned and it would be reasonable that a user would want to search to get exactly what they are looking for. The search should be housed in the page action bar component.</p>
         <h4>Example</h4>
-        <pre>
-            <code>Code Sample Here</code>
-		</pre>
 
-        <!-- Search -->
-        <h2>Footer</h2>
-        <p>The footer component should be used when a large dataset is returned and it would be reasonable that a user would want to search to get exactly what they are looking for. The search should be housed in the page action bar component.</p>
+        <div>
+            <div class="well well-sm">
+                <form class="form-inline clearfix">
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-search-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+
+        <!-- Breadcrumb -->
+        <h2 id="breadcrumb">Breadcrumb</h2>
+        <p></p>
         <h4>Example</h4>
-        
-        <pre>
-            <code>Code Sample Here</code>
-        </pre>
+
+        <div>
+            <div class="row">
+                <ol class="col-xs-12 breadcrumb">
+                    <li><a href="#">Breadcrumb 1</a></li>
+                    <li class="active">Breadcrumb 2</li>
+                </ol>
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-breadcrumb-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+
+        <!-- Page Template -->
+        <h2 id="pagetemplate">Page Template</h2>
+        <p></p>
+
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-page-template-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+
+        <!-- Header -->
+        <h2 id="header">Header</h2>
+        <p></p>
+
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-header-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+
+        <!-- Footer -->
+        <h2 id="header">Footer</h2>
+        <p></p>
+
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-footer-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+
     </div>
 </div>

@@ -1,0 +1,41 @@
+<pre><code>&lt;header&gt;
+	&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
+		&lt;div class=&quot;container&quot;&gt;
+
+			&lt;div class=&quot;navbar-header&quot;&gt;
+				&lt;button aria-controls=&quot;navbar&quot; aria-expanded=&quot;false&quot; data-target=&quot;#navbar&quot; data-toggle=&quot;collapse&quot; class=&quot;navbar-toggle collapsed&quot; type=&quot;button&quot;&gt;
+					&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+					&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+				&lt;/button&gt;
+				&lt;a class=&quot;&quot; href=&quot;index.html&quot;&gt;
+					&lt;img src=&quot;images/gravitant_g.png&quot; alt=&quot;logo&quot; style=&quot;max-height: 55px;&quot; /&gt;
+				&lt;/a&gt;
+				&lt;!--                        &lt;a class=&quot;&quot; href=&quot;index.html&quot;&gt;
+													&lt;img src=&quot;../../resources/images/Wolters-Kluwer-logo.jpg&quot; alt=&quot;logo&quot; style=&quot;max-height: 55px; max-width: 150px;&quot; /&gt;
+												&lt;/a&gt;--&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbar&quot;&gt;
+				&lt;ul class=&quot;nav navbar-nav&quot;&gt;
+					&lt;li ng-class=&quot;{active: activeNav == '/home'}&quot;&gt;&lt;a href=&quot;#/&quot; ng-click=&quot;updateNav('/home')&quot;&gt;Home &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li ng-class=&quot;{active: activeNav == '/styleguide'}&quot;&gt;&lt;a href=&quot;#/styleguide&quot; ng-click=&quot;updateNav('/styleguide')&quot;&gt;Style Guide&lt;/a&gt;&lt;/li&gt;
+					&lt;li ng-class=&quot;{active: activeNav == '/templates'}&quot;&gt;&lt;a href=&quot;#/templates&quot; ng-click=&quot;updateNav('/templates')&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+					&lt;li ng-class=&quot;{active: activeNav == '/components'}&quot;&gt;&lt;a href=&quot;#/components&quot; ng-click=&quot;updateNav('/components')&quot;&gt;Components&lt;/a&gt;&lt;/li&gt;
+					&lt;li ng-class=&quot;{active: activeNav == '/elements'}&quot;&gt;&lt;a href=&quot;#/elements&quot; ng-click=&quot;updateNav('/elements')&quot;&gt;Elements&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+					&lt;li&gt;
+						&lt;select class=&quot;navbar-text&quot; ng-model=&quot;$root.data.theme&quot;&gt;
+							&lt;option value=&quot;gravitant-toolkit&quot;&gt;Gravitant Default&lt;/option&gt;
+							&lt;option value=&quot;gravitant-toolkit-alt&quot;&gt;Gravitant Alternate&lt;/option&gt;
+						&lt;/select&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Feedback&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/nav&gt;
+&lt;/header&gt;
+     
+</code>
+        </pre>
