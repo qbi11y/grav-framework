@@ -3,8 +3,12 @@
 }
 
 pre {
-	margin-bottom: 10em;
-	height: auto;
+	max-height: 200px;
+	overflow: auto;
+}
+
+h2 {
+	margin-top: 60px;
 }
 
 /* Small Devices, Tablets */

@@ -5,79 +5,41 @@
 </div>
 <div class="row">
     <div class="col-md-12">
+        <h2>Getting Started</h2>
         <p>The Gravitant UI Framework was created to ensure there is a consistent user experience throughout all of Gravitant's products. Use this framework to copy and paste code snippets to speed up the development process.</p>
-        <p>In order to leverage the framework please include the following code on your page:</p>
-        
-        <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Gravitant UI Framework&lt;/title&gt;
-    &lt;!--Site Icon--&gt;
-    &lt;link rel=&quot;icon&quot; href=&quot;assets/images/favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
+        <p>In order to leverage the framework copy and paste the following code into the &lt;head&gt; tag of the page being developed.</p>        
+        <pre><code>&lt;!--Font references--&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'&gt;
+&lt;link id=&quot;gravitant-fonts-css&quot; media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2&quot; rel=&quot;stylesheet&quot; /&gt;
 
-    &lt;!--Font references--&gt;
-    &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'&gt;
-    &lt;link id=&quot;gravitant-fonts-css&quot; media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;link href=&quot;assets/fonts/frutiger.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;!--Icons--&gt;
+&lt;link href=&quot;http://framework.gravitant.net/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
 
-    &lt;!--Icons--&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/font-awesome.min.css&quot;&gt;
+&lt;!--Gravitant Theme--&gt;
+&lt;link href=&quot;http://framework.gravitant.net/css/gravitant-toolkit.css&quot; rel=&quot;stylesheet&quot; /&gt;
 
-    &lt;!--Gravitant Theme--&gt;
-    &lt;link href=&quot;assets/gravitant-toolkit.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;!--Script Libraries--&gt;
+&lt;script src=&quot;http://framework.gravitant.net/js/gravitant-toolkit.min.js&quot;&gt;&lt;/script&gt;
 
-    &lt;!--Script Libraries--&gt;
-    &lt;script src=&quot;js/gravitant-toolkit.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;/head&gt;
-&lt;body id=&quot;gravitant-toolkit&quot;&gt;
-    &lt;div class=&quot;page-wrapper&quot;&gt;
-
-        &lt;header&gt;
-            &lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
-                &lt;div class=&quot;container&quot;&gt;
-
-                    &lt;div class=&quot;navbar-header&quot;&gt;
-                        &lt;button aria-controls=&quot;navbar&quot; aria-expanded=&quot;false&quot; data-target=&quot;#navbar&quot; data-toggle=&quot;collapse&quot; class=&quot;navbar-toggle collapsed&quot; type=&quot;button&quot;&gt;
-                            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
-                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-                            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;a class=&quot;&quot; href=&quot;index.html&quot;&gt;
-                            &lt;img src=&quot;assets/images/gravitant-inverse-logo.png&quot; alt=&quot;logo&quot; style=&quot;max-height: 55px;&quot; /&gt;
-                        &lt;/a&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbar&quot;&gt;
-                        &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-                            &lt;li  class=&quot;active&quot;&gt;&lt;a href=&quot;#/&quot; &gt;Home &lt;span class=&quot;sr-only&quot;&gt;(home)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/nav&gt;
-        &lt;/header&gt;
-        &lt;section class=&quot;container&quot;&gt;
-            &lt;div&gt;&lt;/div&gt;
-        &lt;/section&gt;
-        &lt;footer&gt;
-            &lt;div class=&quot;container&quot;&gt;
-                &lt;ul class=&quot;list-unstyled list-inline&quot;&gt;
-                    &lt;li class=&quot;pull-right&quot;&gt;
-                        &lt;img src=&quot;assets/images/powered_by_gravitant.png&quot; alt=&quot;footer logo&quot; /&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/div&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
 
 			</code>
 		</pre>
-        
 
+        <h2>Page Templates</h2>
+        <p>A great place to start the development is from a page template. The template has all of the high level items needed, simply add the data to template to bring it to life. There are three types of the page templates that can be leveraged. Expanded List Template, Table Template, and Details Template.</p>
+        
+        <h2>Theme Generator</h2>
+        <p>The default theme that ships with cloudMatrix can be replaced with a new theme. In order to replace the default theme with a new theme, a new theme must first be generated*. To generate a new theme, simply <a href="http://framework.gravitant.net/theme-generator.zip">download the theme generator</a> and follow the following instructions:</p>
+        <ol>
+            <li>Unzip package</li>
+            <li>Open gravitant-toolkit-alt.less</li>
+            <li>Update the variables to reflect desired changes.</li>
+            <li>Save gravitant-toolkit-alt.less</li>
+            <li>Compile gravitant-toolkit-alt.less into theme.css</li>
+            <li>Upload theme.css to ...</li>
+        </ol>
+        <p><em>*Please note you will need a LESS compiler to generate a theme. You can get more information and download a free compiler at <a href="http://lesscss.org/" target="blank">lesscss.org</a></em></p>
         <p>This framework is a living document. Please feel free to offer feedback to make this framework better and easier to work with.</p>
     </div>
 </div>
