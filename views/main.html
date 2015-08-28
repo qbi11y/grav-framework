@@ -28,6 +28,19 @@
 
         <h2>Page Templates</h2>
         <p>A great place to start the development is from a page template. The template has all of the high level items needed, simply add the data to template to bring it to life. There are three types of the page templates that can be leveraged. Expanded List Template, Table Template, and Details Template.</p>
+
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-page-template-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
         
         <h2>Theme Generator</h2>
         <p>The default theme that ships with cloudMatrix can be replaced with a new theme. In order to replace the default theme with a new theme, a new theme must first be generated*. To generate a new theme, simply <a href="http://framework.gravitant.net/theme-generator.zip">download the theme generator</a> and follow the following instructions:</p>
@@ -41,5 +54,8 @@
         </ol>
         <p><em>*Please note you will need a LESS compiler to generate a theme. You can get more information and download a free compiler at <a href="http://lesscss.org/" target="blank">lesscss.org</a></em></p>
         <p>This framework is a living document. Please feel free to offer feedback to make this framework better and easier to work with.</p>
+
+        <h2>Wireframes</h2>
+        <p>Wireframes can be generated that resemble the framework styling. Simply <a href="http://framework.gravitant.net/gravitant-framework.psd" target="blank">download the Gravitant Framework Photoshop file</a> and generate stlyed wireframes.</p>
     </div>
 </div>

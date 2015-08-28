@@ -8,7 +8,7 @@
                 <li><a ng-click="scrollTo('filter')">Filter</a></li>
                 <li><a ng-click="scrollTo('search')">Search</a></li>
                 <li><a ng-click="scrollTo('breadcrumb')">Breadcrumb</a></li>
-                <!--<li><a ng-click="scrollTo('pagetemplate')">Page Template</a></li>-->
+                <li><a ng-click="scrollTo('alerts')">Alerts</a></li>
                 <li><a ng-click="scrollTo('header')">Header</a></li>
                 <li><a ng-click="scrollTo('footer')">Footer</a></li>
             </ul>
@@ -403,7 +403,7 @@
 
         <!-- Breadcrumb -->
         <h2 id="breadcrumb">Breadcrumb</h2>
-        <p></p>
+        <p>Breadcrumbs are used to quickly navigate to a specific section. Bresdcrumbs are not required if a section is one level deep. If a section is two or more levels deep a breadcrumb is needed for all of the sections. All of the breadcrumb links should be links that link to respective section. The last breadcrumb should represent the current page and should not be a link.</p>
         <h4>Example</h4>
 
         <div>
@@ -427,25 +427,25 @@
             </tabset>
         </div>
 
-        <!-- Page Template -->
+        <!-- Alerts -->
+        <h2 id="alerts">Alerts</h2>
+        <p>...</p>
+        <h4>Example</h4>
 
-        <!--
-        <h2 id="pagetemplate">Page Template</h2>
-        <p></p>
-
+        <!-- alert code here -->
         <h4>Code Example</h4>
 
         <div ng-controller="TabsCtrl">
             <tabset>
                 <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-page-template-html.html'"></ng-include>
+                    <ng-include src="''"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular
                 </tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
-        -->
+
 
         <!-- Header -->
         <h2 id="header">Header</h2>
