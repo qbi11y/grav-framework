@@ -1,4 +1,4 @@
-angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
+angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap', 'smart-table']);
 angular.module('ui.bootstrap.demo').controller('TabsCtrl', function ($scope, $window) {
   $scope.tabs = [
     { title:'Dynamic Title 1', content:'Dynamic content 1' },

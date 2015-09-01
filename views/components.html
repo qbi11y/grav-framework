@@ -11,6 +11,7 @@
                 <li><a ng-click="scrollTo('alerts')">Alerts</a></li>
                 <li><a ng-click="scrollTo('header')">Header</a></li>
                 <li><a ng-click="scrollTo('footer')">Footer</a></li>
+                <li><a ng-click="scrollTo('quickview')">Quick View</a></li>
             </ul>
         </div>
     </div>
@@ -19,7 +20,7 @@
         <p>Components are a collection of elements that represent a user interface task. Use multiple components to build out a page.</p>
         <p>If you feel the provided components do not offer the support you are looking for, please <a href="mailto:">send feedback</a> so the current set of components can be addressed.</p>
 
-        <!-- Page Action Bar -->
+        <!--#region Page Action Bar -->
         <h2 id="pageactionbar">Page Action Bar</h2>
         <p>The page action bar contains page level actions that affect all items on the page. By default the page action bar allows a user to sort by, search, filter and perform actions as they relate to the content.</p>
         <h4>Example</h4>
@@ -150,9 +151,9 @@
                 <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">{{tab.content}}</tab>-->
             </tabset>
         </div>
+        <!--#endregion-->
 
-
-        <!-- List -->
+        <!--#region Expandable List -->
         <h2 id="list">Expanded List</h2>
         <p>The expanded list component should be used to display data that should be shown in a list. You should consider using the expanded list component if there are several fields in the database that need to be displayed. This component allows for a lot of information to be shown while keeping the screen clean and readible.</p>
         <h4>Example</h4>
@@ -265,23 +266,93 @@
                 <!--<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">{{tab.content}}</tab>-->
             </tabset>
         </div>
+        <!--#endregion-->
 
-
-        <!-- Table -->
+        <!--#region Table -->
         <h2 id="table">Basic Table</h2>
         <p>The basic table component should be used to display tabular data. Avoid using the basic table component if the fields to be displayed are more than 7. If the fields to be displayed is greater than 7, consider using the <a href="">expanded list</a> component.</p>
         <h4>Example</h4>
-        <div></div>
+        <div>
+
+            <table class="table table-responsive table-hover" st-table="data.listItems">
+                <thead>
+                    <tr>
+                        <th>
+                            <input cs-select-all="data.listItems" type="checkbox" /></th>
+                        <th st-sort="'column1'">Heading 1</th>
+                        <th st-sort="'column2'">Heading 2</th>
+                        <th st-sort="'column3'">Heading 3</th>
+                        <th st-sort="'column4'">Heading 4</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="listItem in data.listItems">
+                        <td>
+                            <input type="checkbox" cs-select="listItem" ng-model="listItem.isSelected" /></td>
+                        <td>{{listItem.column1}}</td>
+                        <td>{{listItem.column2}}</td>
+                        <td>{{listItem.column3}}</td>
+                        <td>{{listItem.column4}}</td>
+                        <td class="text-right">
+                            <ul class="list-unstyled list-inline list-nomargin">
+                                <li>
+                                    <a data-placement="left" data-toggle="popover" title="Tooltip for {{listItem.name}}" data-html="true">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <div class="popover-content hidden">
+                                        <dl class="dl-horizontal">
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                            <dt>Key</dt>
+                                            <dd>Value</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li><a data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></a></li>
+                                <li><a data-toggle="modal" data-target="#confirmationModal"><i class="fa fa-trash"></i></a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <span class="dropdown-toggle" id="Button1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            <span>Item Actions</span>
+                                            <span class="caret"></span>
+                                        </span>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
         <h4>Code Sample</h4>
         <div ng-controller="TabsCtrl">
             <tabset>
-                <tab heading="HTML">&nbsp;HTML</tab>
+                <tab heading="HTML">&nbsp; <ng-include src="'views/includes/components-filter-html.html'"></ng-include></tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-        <!-- Filter -->
+        <!--#region Filter -->
         <h2 id="filter">Filter</h2>
         <p>The filter component should be used when a large dataset is returned and it would be reasonable that a user would want to filter out data to get exactly what they are looking for. The filter should be triggered in the page action bar component with the filter window being displayed below the page action bar.</p>
         <h4>Example</h4>
@@ -366,8 +437,9 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-        <!-- Search -->
+        <!--#region Search -->
         <h2 id="search">Search</h2>
         <p>The search component should be used when a large dataset is returned and it would be reasonable that a user would want to search to get exactly what they are looking for. The search should be housed in the page action bar component.</p>
         <h4>Example</h4>
@@ -400,8 +472,9 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-        <!-- Breadcrumb -->
+        <!-- #region Breadcrumb -->
         <h2 id="breadcrumb">Breadcrumb</h2>
         <p>Breadcrumbs are used to quickly navigate to a specific section. Bresdcrumbs are not required if a section is one level deep. If a section is two or more levels deep a breadcrumb is needed for all of the sections. All of the breadcrumb links should be links that link to respective section. The last breadcrumb should represent the current page and should not be a link.</p>
         <h4>Example</h4>
@@ -426,8 +499,9 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-        <!-- Alerts -->
+        <!--#region Alerts -->
         <h2 id="alerts">Alerts</h2>
         <p>...</p>
         <h4>Example</h4>
@@ -445,9 +519,9 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-
-        <!-- Header -->
+        <!--#region Header -->
         <h2 id="header">Header</h2>
         <p></p>
 
@@ -463,9 +537,10 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
-        <!-- Footer -->
-        <h2 id="header">Footer</h2>
+        <!--#region Footer -->
+        <h2 id="footer">Footer</h2>
         <p></p>
 
         <h4>Code Example</h4>
@@ -480,6 +555,128 @@
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
             </tabset>
         </div>
+        <!--#endregion-->
 
+        <!--#region Edit-->
+        <h2 id="edit">Edit</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+
+            <a data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></a>
+
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-edit-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Delete-->
+        <h2 id="delete">Delete</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+
+            <a data-toggle="modal" data-target="#confirmationModal"><i class="fa fa-trash"></i></a>
+
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-delete-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Item Actions-->
+        <h2 id="itemactions">Item Actions</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+
+            <div class="dropdown">
+                <span class="dropdown-toggle" id="Span1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Item Actions</span>
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-itemactions-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Modals-->
+        <!-- Delete confirmation Modal -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="confirmationModalLabel">Delete Confirmation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Confirmation Text Here</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit  Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="editModalLabel">Edit Item</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Edit Form Here</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#endregion-->
     </div>
 </div>

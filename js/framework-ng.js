@@ -8,6 +8,33 @@ app.run(function($rootScope) {
     $rootScope.data = {
         theme: 'gravitant-toolkit'
     };
+    
+
+    $('body').popover({
+        selector: '[data-toggle="popover"]',
+        container: 'body',
+        html: true,
+        content: function () {
+            return $(this).next('.popover-content').html();
+        }
+    });
+
+    $('.popper').popover({
+        container: 'body',
+        html: true,
+
+    });
+
+    $('body').on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+    
 });
 
 app.controller('MainController', ['$scope', '$http', '$location', '$anchorScroll', function($scope, $http, $location, $anchorScroll) {
@@ -78,8 +105,16 @@ app.controller('ComponentsController',
             });
 
             $scope.initialize = function () {
-                for (var i = 1; i <= 3; i++) {
-                    $scope.data.listItems.push({ name: "List Item " + i, selected: false });
+                for (var i = 1; i <= 5; i++) {
+                    $scope.data.listItems.push(
+                        {
+                            name: "List Item " + i,
+                            selected: false,
+                            column1: 'Value ' + i,
+                            column2: 'Value ' + i,
+                            column3: 'Value ' + i,
+                            column4: 'Value ' + i
+                        });
                 }
 
                 $scope.actions.updateFilter();
