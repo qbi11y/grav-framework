@@ -7439,3 +7439,7 @@ table.table thead tr th.st-sort-descent:after {
   padding-top: 0.12em;
   content: "\f0dd";
 }
+/*Alerts*/
+.alert i {
+  margin-right: 5px;
+}
