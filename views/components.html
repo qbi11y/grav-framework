@@ -14,7 +14,6 @@
                 <li><a ng-click="scrollTo('quickview')">Quick View</a></li>
                 <li><a ng-click="scrollTo('edit')">Edit</a></li>
                 <li><a ng-click="scrollTo('delete')">Delete</a></li>
-                <li><a ng-click="scrollTo('itemactions')">Item Actions</a></li>
                 <li><a ng-click="scrollTo('progressbar')">Progress Bar</a></li>
             </ul>
         </div>
@@ -655,40 +654,6 @@
             <tabset>
                 <tab heading="HTML">&nbsp;
                     <ng-include src="'views/includes/components-delete-html.html'"></ng-include>
-                </tab>
-                <tab heading="Angular">&nbsp;Angular
-                </tab>
-                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
-            </tabset>
-        </div>
-        <!--#endregion-->
-
-        <!--#region Item Actions-->
-        <h2 id="itemactions">Item Actions</h2>
-        <p></p>
-        <h4>Example</h4>
-
-        <div>
-
-            <div class="dropdown">
-                <span class="dropdown-toggle" id="Span1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span>Item Actions</span>
-                    <span class="caret"></span>
-                </span>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
-        </div>
-        <h4>Code Example</h4>
-
-        <div ng-controller="TabsCtrl">
-            <tabset>
-                <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-itemactions-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular
                 </tab>

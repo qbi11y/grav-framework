@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-2">
 		<ul class="list-unstyled">
-			<li>Component 1</li>
+			<li><a ng-click="scrollTo('itemactions')">Item Actions</a></li>
 			<li>Component 2</li>
 			<li>Component 3</li>
 			<li>Component 4</li>
@@ -10,10 +10,38 @@
 	</div>
 	<div class="col-md-10">
 		<h1>Elements</h1>
-		<h2>Section Title</h2>
-		<p>Section information</p>
-		<h4>Section Example</h4>
-		<pre><code>Code Sample Here</code>
-		</pre>
+		<!--#region Item Actions-->
+        <h2 id="itemactions">Item Actions</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+
+            <div class="dropdown">
+                <span class="dropdown-toggle" id="Span1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Item Actions</span>
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-itemactions-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
 	</div>
 </div>
