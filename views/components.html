@@ -12,6 +12,9 @@
                 <li><a ng-click="scrollTo('header')">Header</a></li>
                 <li><a ng-click="scrollTo('footer')">Footer</a></li>
                 <li><a ng-click="scrollTo('quickview')">Quick View</a></li>
+                <li><a ng-click="scrollTo('edit')">Edit</a></li>
+                <li><a ng-click="scrollTo('delete')">Delete</a></li>
+                <li><a ng-click="scrollTo('itemactions')">Item Actions</a></li>
             </ul>
         </div>
     </div>
@@ -549,6 +552,46 @@
             <tabset>
                 <tab heading="HTML">&nbsp;
                     <ng-include src="'views/includes/components-footer-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular
+                </tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Quick View-->
+        <h2 id="quickview">Quick View</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+            <a data-placement="left" data-toggle="popover" title="Quick View" data-html="true">
+                <i class="fa fa-eye"></i><span>Quick View</span>
+            </a>
+            <div class="popover-content hidden">
+                <dl class="dl-horizontal">
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                    <dt>Key</dt>
+                    <dd>Value</dd>
+                </dl>
+            </div>
+        </div>
+        <h4>Code Example</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-quickview-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular
                 </tab>
