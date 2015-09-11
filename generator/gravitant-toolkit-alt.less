@@ -1,55 +1,90 @@
-@Do-Compile: true;
+/******************************* T H E M E    G E N E R A T O R ******************************/
+/*
+	In order to create a custom theme for cloudMatrix a LESS compuiler is required. You can download one
+	and get more information at http://lesscss.org.
 
+	This LESS file contains the variables in which the theme will be built. The compiler will take this
+	file and convert it into a usable CSS file which will overwrite the default cloudMatrix theme. This
+	LESS file MUST BE COMPILED into a CSS file.
+
+	The below varialbes represent the supported cloudMatrix customizations. Customizations outside of 
+	these variables are not supported and have not been tested.
+
+	To have a supported customization added please send an email to ux@gravitant.com
+
+	*****INSTRUCTIONS*******
+	1. Ensure that you have the new theme information handy (colors, fonts, sizes, etc).
+	2. Update the variables below with the appropriate values.
+	3. Save the LESS file.
+	4. Compile the LESS file into CSS file.
+	5. Use the resulting CSS file to overwrite the default cloudMatrix theme.
+	6. Test the implementation.
+*/
+
+/* DO NOT CHANGE CODE BELOW */
+
+@Do-Compile: true;
 @import "src/bootstrap.less";
 @import "src/theme.less";
 
+/* DO NOT CHANGE CODE ABOVE */
+
+
+
 // Overall brand color
-@brand-primary:         red;
+@brand-primary:         purple;
+@body-bg:               @gray-lighter;            /* Background color for `<body>`. */
+@text-color:            @gray-dark;               /* Global text color on `<body>`. */
+@link-color:            green; //@brand-primary;  /* Global textual link color. */
+@link-hover-color:      darken(@link-color, 15%); /* Link hover color set via `darken()` function. */
+@link-hover-decoration: underline; 				  /* Global link hover decoration. */
 
 
-// Background color for `<body>`.
-@body-bg:               @gray-lighter;
-// Global text color on `<body>`.
-@text-color:            @gray-dark;
-
-// Global textual link color.
-@link-color:            green; //@brand-primary;
-// Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
-// Link hover decoration.
-@link-hover-decoration: underline;
-
-
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
-@font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-// Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+/* Typography */
+/* Control font faces and font sizes */
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* The desired sans serif font */
+@font-family-serif:       "Klinic-Slab", Georgia, "Times New Roman", Times, serif;     /* The desired serif font */
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-base:          14px;                                      /* Base font size in which all other fonts sizes are based. Supported range is 12px-16px */
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+/* 
+	Altering the below font sizes may result in unintended results. Please be very careful when changing these. 
+	In most cases altering the above @font-size-base should be 
+	Approximate (~) font sizes are based on a base font size of 14px.
+*/
+@font-size-large:  ceil((@font-size-base * 1.25)); // ~18px   /* Font size for large text - adjust either the decimal and use a whole number */
+@font-size-small:  ceil((@font-size-base * 0.85)); // ~12px	  /* Font size for small text - adjust either the decimal and use a whole number */
+
+@font-size-h1:     floor((@font-size-base * 2.6)); // ~36px   /* Font size for <h1> - adjust either the decimal and use a whole number */
+@font-size-h2:     floor((@font-size-base * 2.15)); // ~30px  /* Font size for <h2> - adjust either the decimal and use a whole number */
+@font-size-h3:     ceil((@font-size-base * 1.7)); // ~24px    /* Font size for <h3> - adjust either the decimal and use a whole number */ 
+@font-size-h4:     ceil((@font-size-base * 1.25)); // ~18px   /* Font size for <h4> - adjust either the decimal and use a whole number */
+@font-size-h5:     @font-size-base;                           /* Font size for <h5> - adjust either the decimal and use a whole number */
+@font-size-h6:     ceil((@font-size-base * 0.85)); // ~12px   /* Font size for <h6> - adjust either the decimal and use a whole number */
+
+/*
+Considering removing to ensure that line heights aren't messed with throughout the product
+
 
 // Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
 // Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+*/
 
 // By default, this inherits from the `<body>`.
-@headings-font-family: "Impact", "Klinic-Slab", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-family: "Klinic-Slab", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
+/* Border Radius */
+/* To turn off border radius set all to 0 */
+@border-radius-base: 4px;
+@border-radius-large: 6px;
+@border-radius-small: 3px;
 
-
+/* Wells */
+@well-bg: #f5f5f5;                  /* Well background color */
+@well-border: darken(@well-bg, 7%); /* Well border color - adjust the % or use a whole number */
