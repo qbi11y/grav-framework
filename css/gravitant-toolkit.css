@@ -7443,3 +7443,28 @@ table.table thead tr th.st-sort-descent:after {
 .alert i {
   margin-right: 5px;
 }
+/* Underlined Headers */
+.border-bottom {
+  padding-bottom: 3px;
+  border-bottom: 1px dotted #ccc;
+}
+@media (min-width: 769px) {
+  dl.dl-bordered dt {
+    float: left;
+    clear: left;
+    border-bottom: dotted 1px #ccc;
+  }
+  dl.dl-bordered dd {
+    /*float: left;*/
+    border-bottom: dotted 1px #ccc;
+  }
+}
+.progress {
+  margin-bottom: 3px !important;
+}
+.progress-icon {
+  margin-left: 5px;
+}
+.progress-text {
+  margin-bottom: 5px;
+}
