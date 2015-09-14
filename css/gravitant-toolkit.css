@@ -7449,13 +7449,16 @@ table.table thead tr th.st-sort-descent:after {
   border-bottom: 1px dotted #ccc;
 }
 @media (min-width: 769px) {
-  dl.dl-bordered dt {
-    float: left;
-    clear: left;
+  dl.dl-horizontal dt.border-bottom {
+    margin: 0;
+    width: 100%;
+    height: 0;
     border-bottom: dotted 1px #ccc;
   }
-  dl.dl-bordered dd {
-    /*float: left;*/
+  dl.dl-horizontal dd.border-bottom {
+    margin: 0;
+    width: 100%;
+    height: 0;
     border-bottom: dotted 1px #ccc;
   }
 }
