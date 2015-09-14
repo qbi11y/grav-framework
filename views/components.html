@@ -16,6 +16,7 @@
                 <li><a ng-click="scrollTo('delete')">Delete</a></li>
                 <li><a ng-click="scrollTo('progressbar')">Progress Bar</a></li>
                 <li><a ng-click="scrollTo('keyvaluepair')">Key Value Pair</a></li>
+                <li><a ng-click="scrollTo('borderlessdropdown')">Borderless Drop Down</a></li>
             </ul>
         </div>
     </div>
@@ -660,7 +661,7 @@
                     60%
                 </div>
             </div>
-            <br/>
+            <br />
             <div class="">
 
                 <span class="text-success pull-right progress-icon"><i class="fa fa-check-circle-o"></i></span>
@@ -673,7 +674,7 @@
                     <strong>Complete</strong>
                 </div>
             </div>
-            <br/>
+            <br />
             <div>
                 <span class="text-warning pull-right progress-icon"><i class="fa fa-warning"></i></span>
                 <div class="progress">
@@ -685,7 +686,7 @@
                     <strong>In Progress:</strong> <span>Waiting for User Information</span>
                 </div>
             </div>
-            <br/>
+            <br />
             <div>
                 <span class="text-danger pull-right progress-icon"><i class="fa fa-times-circle-o"></i></span>
                 <div class="progress">
@@ -719,26 +720,32 @@
         <h4>Example</h4>
 
         <div>
-            
+
             <dl class="dl-horizontal">
                 <dt>Key</dt>
                 <dd>Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
                 <dt>Really Long Key</dt>
                 <dd>Really Long Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
                 <dt>Key</dt>
                 <dd>Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
                 <dt>Key</dt>
                 <dd>Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
                 <dt>Key</dt>
                 <dd>Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
                 <dt>Key</dt>
                 <dd>Value</dd>
-                <dt class="border-bottom"></dt><dd class="border-bottom"></dd>
+                <dt class="border-bottom"></dt>
+                <dd class="border-bottom"></dd>
             </dl>
 
         </div>
@@ -750,6 +757,42 @@
             <tabset>
                 <tab heading="HTML">&nbsp;
                     <ng-include src="'views/includes/components-keyvaluepair-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Borderless Dropdown -->
+        <h2 id="borderlessdropdown">Borderless Dropdown</h2>
+        <p></p>
+        <h4>Example</h4>
+
+        <div>
+
+            <div class="dropdown">
+                <span class="dropdown-toggle" id="Span1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Item Actions</span>
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <h4>Code Snippet</h4>
+
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-borderlessdropdown-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
