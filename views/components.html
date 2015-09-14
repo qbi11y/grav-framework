@@ -16,8 +16,7 @@
                 <li><a ng-click="scrollTo('delete')">Delete</a></li>
                 <li><a ng-click="scrollTo('progressbar')">Progress Bar</a></li>
                 <li><a ng-click="scrollTo('keyvaluepair')">Key Value Pair</a></li>
-                <li><a ng-click="scrollTo('borderlessdropdown')">Borderless Drop Down</a></li>
-                <li><a ng-click="scrollTo('collapsiblesection')">Collapsible Section</a></li>
+                <li><a ng-click="scrollTo('collapsiblesection')">Collapsible Sub Section</a></li>
             </ul>
         </div>
     </div>
@@ -512,7 +511,16 @@
 
         <div>
             <div class="alert alert-success alert-dismissible fade in" role="alert">
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><i class="fa fa-check"></i><span>The service was successfully edited.</span>
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><i class="fa fa-check"></i><span>The service was successfully edited</span>
+            </div>
+            <div class="alert alert-info alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><i class="fa fa-check"></i><span>The service is in progress</span>
+            </div>
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><i class="fa fa-check"></i><span>A service warning has occurred</span>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><i class="fa fa-check"></i><span>A service error has occurred</span>
             </div>
         </div>
         <!-- alert code here -->
@@ -716,8 +724,8 @@
         <!--#endregion-->
 
         <!--#region Key Value Pair -->
-        <h2 id="keyvaluepair">Key Value Pair</h2>
-        <p></p>
+        <h2 id="keyvaluepair">Section Key Value Pair</h2>
+        <p>When displaying key value pairs on the details page within a section use the section key value pair component. The key value pairs are separated by horizontal rules to ensure the user can correlate the key value pairs easily.</p>
         <h4>Example</h4>
 
         <div>
@@ -765,45 +773,9 @@
         </div>
         <!--#endregion-->
 
-        <!--#region Borderless Dropdown -->
-        <h2 id="borderlessdropdown">Borderless Dropdown</h2>
-        <p></p>
-        <h4>Example</h4>
-
-        <div>
-
-            <div class="dropdown">
-                <span class="dropdown-toggle" id="Span1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span>Item Actions</span>
-                    <span class="caret"></span>
-                </span>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-
-        <h4>Code Snippet</h4>
-
-        <div ng-controller="TabsCtrl">
-            <tabset>
-                <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-borderlessdropdown-html.html'"></ng-include>
-                </tab>
-                <tab heading="Angular">&nbsp;Angular</tab>
-                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
-            </tabset>
-        </div>
-        <!--#endregion-->
-
         <!--#region Collapsible Section -->
-        <h2 id="collapsiblesection">Collapsible Section</h2>
-        <p></p>
+        <h2 id="collapsiblesection">Collapsible Sub Section</h2>
+        <p>When content on a details page impacts how much content can be shown at once, consider using a collapsible sub section. This will allow a user to control what they see and when while allowing for the most content to be shown on the screen.</p>
         <h4>Example</h4>
 
         <div>
@@ -812,7 +784,7 @@
                 <span class="collapsed" role="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fa fa-angle-down collapsed-hide"></i>
                     <i class="fa fa-angle-right collapsed-show"></i>
-                    &nbsp;<span>VDC</span>
+                    &nbsp;<span>Sub Section Name</span>
                 </span>
             </h4>
             <div class="collapse" id="collapseExample">
