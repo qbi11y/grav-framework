@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{593832A5-B8C8-43A4-9556-AD0B31981FC7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GravitantDemo</RootNamespace>
+    <AssemblyName>GravitantDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap.html" />
+    <Content Include="email.html" />
+    <Content Include="details.html" />
+    <Content Include="js\smart-table.js" />
+    <Content Include="table.html" />
+    <Content Include="images\gravitant-inverse-logo.png" />
+    <Content Include="images\gravitant_g.png" />
+    <Content Include="images\powered_by_gravitant.png" />
+    <Content Include="index.html" />
+    <Content Include="js\gravitant-toolkit.js">
+      <DependentUpon>gravitant-toolkit.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="js\gravitant-toolkit.min.js">
+      <DependentUpon>gravitant-toolkit.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="js\src\bootstrap.js" />
+    <Content Include="js\toolkitApp.js" />
+    <Content Include="style\font-awesome.css" />
+    <Content Include="style\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="style\fonts\fontawesome-webfont.svg" />
+    <Content Include="style\fonts\frutiger.css" />
+    <Content Include="style\fonts\frutigerce-bold-webfont.svg" />
+    <Content Include="style\fonts\frutigerce-bolditalic-webfont.svg" />
+    <Content Include="style\fonts\frutigerce-italic-webfont.svg" />
+    <Content Include="style\fonts\frutigerce-light-webfont.svg" />
+    <Content Include="style\fonts\frutigerce-lightitalic-webfont.svg" />
+    <Content Include="style\fonts\frutigerce-roman-webfont.svg" />
+    <Content Include="style\gravitant-toolkit-alt.css">
+      <DependentUpon>gravitant-toolkit-alt.less</DependentUpon>
+    </Content>
+    <Content Include="style\gravitant-toolkit-alt.min.css">
+      <DependentUpon>gravitant-toolkit-alt.less</DependentUpon>
+    </Content>
+    <Content Include="style\gravitant-toolkit.css">
+      <DependentUpon>gravitant-toolkit.less</DependentUpon>
+    </Content>
+    <Content Include="style\gravitant-toolkit.min.css">
+      <DependentUpon>gravitant-toolkit.less</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="style\fonts\frutigerce-bold-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-bold-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-bold-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-bold-webfont.woff2" />
+    <Content Include="style\fonts\frutigerce-bolditalic-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-bolditalic-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-bolditalic-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-bolditalic-webfont.woff2" />
+    <Content Include="style\fonts\frutigerce-italic-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-italic-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-italic-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-italic-webfont.woff2" />
+    <Content Include="style\fonts\frutigerce-light-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-light-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-light-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-light-webfont.woff2" />
+    <Content Include="style\fonts\frutigerce-lightitalic-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-lightitalic-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-lightitalic-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-lightitalic-webfont.woff2" />
+    <Content Include="style\fonts\frutigerce-roman-webfont.eot" />
+    <Content Include="style\fonts\frutigerce-roman-webfont.ttf" />
+    <Content Include="style\fonts\frutigerce-roman-webfont.woff" />
+    <Content Include="style\fonts\frutigerce-roman-webfont.woff2" />
+    <None Include="js\gravitant-toolkit.js.bundle" />
+    <Content Include="js\gravitant-toolkit.min.js.map">
+      <DependentUpon>gravitant-toolkit.js.bundle</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="style\src\alerts.less" />
+    <Content Include="style\src\badges.less" />
+    <Content Include="style\src\breadcrumbs.less" />
+    <Content Include="style\src\button-groups.less" />
+    <Content Include="style\src\buttons.less" />
+    <Content Include="style\src\carousel.less" />
+    <Content Include="style\src\close.less" />
+    <Content Include="style\src\code.less" />
+    <Content Include="style\src\component-animations.less" />
+    <Content Include="style\src\dropdowns.less" />
+    <Content Include="style\src\forms.less" />
+    <Content Include="style\src\glyphicons.less" />
+    <Content Include="style\src\grid.less" />
+    <Content Include="style\src\input-groups.less" />
+    <Content Include="style\src\jumbotron.less" />
+    <Content Include="style\src\labels.less" />
+    <Content Include="style\src\list-group.less" />
+    <Content Include="style\src\media.less" />
+    <Content Include="style\src\mixins.less" />
+    <Content Include="style\src\mixins\alerts.less" />
+    <Content Include="style\src\mixins\background-variant.less" />
+    <Content Include="style\src\mixins\border-radius.less" />
+    <Content Include="style\src\mixins\buttons.less" />
+    <Content Include="style\src\mixins\center-block.less" />
+    <Content Include="style\src\mixins\clearfix.less" />
+    <Content Include="style\src\mixins\forms.less" />
+    <Content Include="style\src\mixins\gradients.less" />
+    <Content Include="style\src\mixins\grid-framework.less" />
+    <Content Include="style\src\mixins\grid.less" />
+    <Content Include="style\src\mixins\hide-text.less" />
+    <Content Include="style\src\mixins\image.less" />
+    <Content Include="style\src\mixins\labels.less" />
+    <Content Include="style\src\mixins\list-group.less" />
+    <Content Include="style\src\mixins\nav-divider.less" />
+    <Content Include="style\src\mixins\nav-vertical-align.less" />
+    <Content Include="style\src\mixins\opacity.less" />
+    <Content Include="style\src\mixins\pagination.less" />
+    <Content Include="style\src\mixins\panels.less" />
+    <Content Include="style\src\mixins\progress-bar.less" />
+    <Content Include="style\src\mixins\reset-filter.less" />
+    <Content Include="style\src\mixins\reset-text.less" />
+    <Content Include="style\src\mixins\resize.less" />
+    <Content Include="style\src\mixins\responsive-visibility.less" />
+    <Content Include="style\src\mixins\size.less" />
+    <Content Include="style\src\mixins\tab-focus.less" />
+    <Content Include="style\src\mixins\table-row.less" />
+    <Content Include="style\src\mixins\text-emphasis.less" />
+    <Content Include="style\src\mixins\text-overflow.less" />
+    <Content Include="style\src\mixins\vendor-prefixes.less" />
+    <Content Include="style\src\modals.less" />
+    <Content Include="style\src\navbar.less" />
+    <Content Include="style\src\navs.less" />
+    <Content Include="style\src\normalize.less" />
+    <Content Include="style\src\pager.less" />
+    <Content Include="style\src\pagination.less" />
+    <Content Include="style\src\panels.less" />
+    <Content Include="style\src\popovers.less" />
+    <Content Include="style\src\print.less" />
+    <Content Include="style\src\progress-bars.less" />
+    <Content Include="style\src\responsive-embed.less" />
+    <Content Include="style\src\responsive-utilities.less" />
+    <Content Include="style\src\scaffolding.less" />
+    <Content Include="style\src\tables.less" />
+    <Content Include="style\src\thumbnails.less" />
+    <Content Include="style\src\tooltip.less" />
+    <Content Include="style\src\type.less" />
+    <Content Include="style\src\utilities.less" />
+    <Content Include="style\src\variables.less" />
+    <Content Include="style\src\wells.less" />
+    <Content Include="style\src\bootstrap.less" />
+    <Content Include="style\src\theme.less" />
+    <Content Include="style\gravitant-toolkit.less" />
+    <Content Include="style\src\variables-original.less" />
+    <Content Include="web.config" />
+    <Content Include="style\fonts\fontawesome-webfont.eot" />
+    <Content Include="style\fonts\fontawesome-webfont.ttf" />
+    <Content Include="style\fonts\fontawesome-webfont.woff" />
+    <Content Include="style\fonts\fontawesome-webfont.woff2" />
+    <Content Include="style\fonts\FontAwesome.otf" />
+    <Content Include="style\gravitant-toolkit-alt.less" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10964</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10964/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

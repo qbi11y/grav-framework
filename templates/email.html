@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="toolkitApp" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cloudMatrix powered by Gravitant</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link id="gravitant-fonts-css" media="all" type="text/css" href="http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2" rel="stylesheet">
+    <link href="style/fonts/frutiger.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/font-awesome.min.css">
+
+
+    <!--Theme Selection-->
+    <link ng-if="!$root.data.theme || $root.data.theme == 'gravitant-toolkit'" href="style/gravitant-toolkit.css" rel="stylesheet" />
+    <link ng-if="$root.data.theme == 'gravitant-toolkit-alt'" href="style/gravitant-toolkit-alt.css" rel="stylesheet" />
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body id="gravitant-toolkit">
+    <div class="page-wrapper">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-xs-8 col-xs-offset-2">
+
+                        <div class="navbar-header">
+
+                            <a class="" href="index.html">
+                                <img src="images/gravitant_g.png" alt="logo" style="max-height: 55px;" />
+                            </a>
+                            <!--                        <a class="" href="index.html">
+                                                            <img src="../../resources/images/Wolters-Kluwer-logo.jpg" alt="logo" style="max-height: 55px; max-width: 150px;" />
+                                                        </a>-->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="container">
+            <div class="col-xs-8 col-xs-offset-2">
+
+                <h1>Email Subject</h1>
+
+                <p>First Paragraph</p>
+                <p>Second Paragraph</p>
+                <p>Third Paragraph</p>
+
+
+                <h3>Email Details</h3>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <dl class="dl-horizontal">
+                            <dt>Key</dt>
+                            <dd><a>Value</a></dd>
+                            <dt>Key</dt>
+                            <dd>Value</dd>
+                            <dt>Key</dt>
+                            <dd>Value</dd>
+                        </dl>
+                    </div>
+                    <div class="col-xs-6">
+                        <dl class="dl-horizontal">
+                            <dt>Key</dt>
+                            <dd><a>Value</a></dd>
+                            <dt>Key</dt>
+                            <dd>Value</dd>
+                            <dt>Key</dt>
+                            <dd>Value</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <button class="btn btn-primary">Call to Action</button>
+                        <br />
+                        <a>Support Link</a>
+
+                    </div>
+                </div>
+
+
+                <br />
+                <br />
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/gravitant-toolkit.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/smart-table.js"></script>
+    <script src="js/toolkitApp.js"></script>
+</body>
+</html>

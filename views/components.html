@@ -17,6 +17,9 @@
                 <li><a ng-click="scrollTo('progressbar')">Progress Bar</a></li>
                 <li><a ng-click="scrollTo('keyvaluepair')">Key Value Pair</a></li>
                 <li><a ng-click="scrollTo('collapsiblesection')">Collapsible Sub Section</a></li>
+                <li><a ng-click="scrollTo('modal')">Modal</a></li>
+                <li><a ng-click="scrollTo('wizard')">Wizard Modal ( &lt;= 3 steps )</a></li>
+                <li><a ng-click="scrollTo('wizard_3')">Wizard Modal ( &gt; 3 steps )</a></li>
             </ul>
         </div>
     </div>
@@ -808,6 +811,64 @@
             </tabset>
         </div>
         <!--#endregion-->
+
+        <!--#region Modal -->
+        <h2 id="modal">Modal</h2>
+        <p>Use modals when users attention needs to be focused on the task at hand. Modals disable other actions outside of the modal until the modal is closed. Do not spawn modals from an existing modal.</p>
+        <h4>Example</h4>
+        <div>
+            <!-- example code here -->
+        </div>
+        <h4>Code Snippet</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Wizard Modal 3 or less -->
+        <h2 id="wizard">Wizard Modal ( 3 steps or less )</h2>
+        <p>Use modals when users attention needs to be focused on the task at hand. Modals disable other actions outside of the modal until the modal is closed. Do not spawn modals from an existing modal.</p>
+        <h4>Example</h4>
+        <div>
+            <!-- example code here -->
+        </div>
+        <h4>Code Snippet</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Wizard Modal more than 3 -->
+        <h2 id="wizard_3">Wizard Modal ( more than 3 steps )</h2>
+        <p>Use modals when users attention needs to be focused on the task at hand. Modals disable other actions outside of the modal until the modal is closed. Do not spawn modals from an existing modal.</p>
+        <h4>Example</h4>
+        <div>
+            <!-- example code here -->
+        </div>
+        <h4>Code Snippet</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
 
         <!--#region Modals-->
         <!-- Delete confirmation Modal -->
