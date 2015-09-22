@@ -4066,7 +4066,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555555;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #555555;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -7470,4 +7470,40 @@ table.table thead tr th.st-sort-descent:after {
 }
 .progress-text {
   margin-bottom: 5px;
+}
+/* Tab Styling */
+.nav-tabs {
+  border-bottom: 2px solid transparent;
+  margin-bottom: 15px;
+}
+.nav-tabs > li {
+  float: left;
+}
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border-bottom: 2px solid transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+}
+.nav-tabs > li > a:hover {
+  border-color: #eeeeee;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555555;
+  background-color: #ffffff;
+  border-bottom: 2px solid #555555;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  cursor: default;
+}
+/*Modal Styling*/
+.modal-header {
+  background-color: #2c71c9;
+  color: #ffffff;
 }

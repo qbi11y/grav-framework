@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="toolkitApp" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cloudMatrix powered by Gravitant</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link id="gravitant-fonts-css" media="all" type="text/css" href="http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2" rel="stylesheet">
+    <link href="style/fonts/frutiger.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/font-awesome.min.css">
+
+
+    <!--Theme Selection-->
+    <link ng-if="!$root.data.theme || $root.data.theme == 'gravitant-toolkit'" href="style/gravitant-toolkit.css" rel="stylesheet" />
+    <link ng-if="$root.data.theme == 'gravitant-toolkit-alt'" href="style/gravitant-toolkit-alt.css" rel="stylesheet" />
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body id="gravitant-toolkit">
+    <div class="page-wrapper">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+
+                    <div class="navbar-header">
+                        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="" href="index.html">
+                            <img src="images/gravitant_g.png" alt="logo" style="max-height: 55px;" />
+                        </a>
+                        <!--                        <a class="" href="index.html">
+                                                            <img src="../../resources/images/Wolters-Kluwer-logo.jpg" alt="logo" style="max-height: 55px; max-width: 150px;" />
+                                                        </a>-->
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{active: activeNav == '/home'}"><a href="#/" ng-click="updateNav('/home')">Home <span class="sr-only">(current)</span></a></li>
+                            <li ng-class="{active: activeNav == '/styleguide'}"><a href="#/styleguide" ng-click="updateNav('/styleguide')">Style Guide</a></li>
+                            <li ng-class="{active: activeNav == '/templates'}"><a href="#/templates" ng-click="updateNav('/templates')">Templates</a></li>
+                            <li ng-class="{active: activeNav == '/components'}"><a href="#/components" ng-click="updateNav('/components')">Components</a></li>
+                            <li ng-class="{active: activeNav == '/elements'}"><a href="#/elements" ng-click="updateNav('/elements')">Elements</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <select class="navbar-text" ng-model="$root.data.theme">
+                                    <option value="gravitant-toolkit">Gravitant Default</option>
+                                    <option value="gravitant-toolkit-alt">Gravitant Alternate</option>
+                                </select></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="container" ng-init="viewmodel.formMode='login'">
+
+
+            <h1>Login</h1>
+            <div class="well clearfix">
+
+                <form class="form-horizontal text-center">
+                    <div class="form-group" ng-if="viewmodel.formMode === 'signup'">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <input type="text" class="form-control" placeholder="Enter First Name"></div>
+                    </div>
+                    <div class="form-group" ng-if="viewmodel.formMode === 'signup'">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <input type="text" class="form-control" placeholder="Enter Last Name"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <input type="email" class="form-control" placeholder="Enter Email"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="form-group" ng-if="viewmodel.formMode === 'signup'">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <ul class="list-unstyled text-center">
+                <li ng-if="viewmodel.formMode === 'login'">
+                    <button class="btn btn-primary">Log In</button>
+                </li>
+                <li ng-if="viewmodel.formMode === 'signup'">
+                    <button class="btn btn-primary">Sign Up</button>
+                </li>
+                <li>
+                    <button class="btn btn-link" ng-if="viewmodel.formMode === 'login'" ng-click="viewmodel.formMode = 'signup'">Sign Up</button>
+                </li>
+                <li>
+                    <button class="btn btn-link" ng-if="viewmodel.formMode === 'signup'" ng-click="viewmodel.formMode = 'login'">Log In</button>
+                </li>
+                <li>
+                    <button class="btn btn-link">Forgot Password</button>
+                </li>
+            </ul>
+
+
+        </section>
+
+        <footer>
+            <div class="container">
+                <ul class="list-unstyled list-inline">
+                    <li class="pull-right">
+                        <img src="images/powered_by_gravitant.png" alt="footer logo" />
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/gravitant-toolkit.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/smart-table.js"></script>
+    <script src="js/toolkitApp.js"></script>
+</body>
+</html>
