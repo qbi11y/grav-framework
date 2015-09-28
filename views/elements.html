@@ -1,11 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="toolkitApp" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cloudMatrix powered by Gravitant</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link id="gravitant-fonts-css" media="all" type="text/css" href="http://tools.gravitant.com/wp-content/themes/gravitant-evaluate/css/klinic-slab.css?ver=3.9.2" rel="stylesheet">
+    <link href="style/fonts/frutiger.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+
+    <!--Theme Selection-->
+    <link href="../css/gravitant-toolkit.css" rel="stylesheet" />
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
 <div class="row">
 	<div class="col-md-2">
 		<ul class="list-unstyled">
 			<li><a ng-click="scrollTo('itemactions')">Item Actions</a></li>
-			<li>Component 2</li>
-			<li>Component 3</li>
-			<li>Component 4</li>
-			<li>Component 5</li>
+            <li><a ng-click="scrollTo('input')">Form - Inputs</a></li>
+            <li><a ng-click="scrollTo('input')">Form - Checkboxes</a></li>
+            <li><a ng-click="scrollTo('input')">Form - Radio Buttons</a></li>
+            <li><a ng-click="scrollTo('input')">Form - Dropdowns</a></li>
 		</ul>
 	</div>
 	<div class="col-md-10">
@@ -45,3 +75,4 @@
         <!--#endregion-->
 	</div>
 </div>
+</body></html>

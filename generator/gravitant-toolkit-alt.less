@@ -50,7 +50,7 @@
 
 /* 
 	Altering the below font sizes may result in unintended results. Please be very careful when changing these. 
-	In most cases altering the above @font-size-base should be 
+	In most cases altering the above @font-size-base should be enough. 
 	Approximate (~) font sizes are based on a base font size of 14px.
 */
 @font-size-large:  ceil((@font-size-base * 1.25)); // ~18px   /* Font size for large text - adjust either the decimal and use a whole number */
@@ -88,3 +88,19 @@ Considering removing to ensure that line heights aren't messed with throughout t
 /* Wells */
 @well-bg: #f5f5f5;                  /* Well background color */
 @well-border: darken(@well-bg, 7%); /* Well border color - adjust the % or use a whole number */
+
+
+/* Main Header Navigation */
+// Navbar Customization
+@navbar-default-color:             #777;                                /* Text color of navigation header */
+@navbar-default-bg:                #f8f8f8;                             /* Background color of navigation header */
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);    /* Border color of navigation header, by default it takes the background color and applies a darkening filter, this also accept a hex value */
+
+// Navbar links
+@navbar-default-link-color:                #777;                             /* Link color */
+@navbar-default-link-hover-color:          #333;                             /* Link hover color */
+@navbar-default-link-hover-bg:             transparent;                      /* Link hover background color */
+@navbar-default-link-active-color:         #555;                             /* Link active color */
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%); /* Link active background color */
+@navbar-default-link-disabled-color:       #ccc;                             /* Link disabled color */
+@navbar-default-link-disabled-bg:          transparent;                      /* Link disabled background color */
