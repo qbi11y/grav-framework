@@ -104,3 +104,55 @@ Considering removing to ensure that line heights aren't messed with throughout t
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%); /* Link active background color */
 @navbar-default-link-disabled-color:       #ccc;                             /* Link disabled color */
 @navbar-default-link-disabled-bg:          transparent;                      /* Link disabled background color */
+
+// Dropdown menu `background-color`.
+@dropdown-bg:                    #fff;
+// Dropdown menu `border-color`.
+@dropdown-border:                rgba(0,0,0,.15);
+// Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:       #ccc;
+// Divider color for between dropdown items.
+@dropdown-divider-bg:            #e5e5e5;
+
+// Dropdown link text color.
+@dropdown-link-color:            @gray-dark;
+// Hover color for dropdown links.
+@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+// Hover background for dropdown links.
+@dropdown-link-hover-bg:         #f5f5f5;
+
+// Active dropdown menu item text color.
+@dropdown-link-active-color:     @component-active-color;
+// Active dropdown menu item background color.
+@dropdown-link-active-bg:        @component-active-bg;
+
+// Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   @gray-light;
+
+// Text color for headers within dropdown menus.
+@dropdown-header-color:          @gray-light;
+
+
+// Point at which the navbar becomes uncollapsed.
+//@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     995px;
+// Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+/*Badges/Pills*/
+
+@badge-color:                 #fff;
+// Linked badge text color on hover
+@badge-link-hover-color:      #fff;
+@badge-bg:                    @gray-light;
+
+// Badge text color in active nav link
+@badge-active-color:          @link-color;
+// Badge background color in active nav link
+@badge-active-bg:             #fff;
+
+@badge-font-weight:           bold;
+@badge-line-height:           1;
+@badge-border-radius:         10px;
+
+@badge-border:  1px solid black;
