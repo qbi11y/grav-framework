@@ -1,0 +1,45 @@
+<pre><code>   &lt;button class=&quot;btn btn-primary&quot; data-backdrop=&quot;static&quot; data-toggle=&quot;modal&quot; data-target=&quot;#3StepWizardModal&quot;&gt;Launch 3 Step Wizard&lt;/button&gt;
+
+            &lt;!-- 3 Step Wizard Modal --&gt;
+            &lt;div class=&quot;modal fade&quot; id=&quot;3StepWizardModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;3StepWizardModalLabel&quot; aria-hidden=&quot;true&quot; ng-init=&quot;currentStep3Step = 1&quot;&gt;
+                &lt;div class=&quot;modal-dialog modal-lg modal-wizard&quot;&gt;
+                    &lt;div class=&quot;modal-content&quot;&gt;
+                        &lt;div class=&quot;modal-header&quot;&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                            &lt;h3 class=&quot;modal-title&quot; id=&quot;3StepWizardModalLabel&quot;&gt;Edit Item&lt;/h3&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;modal-body&quot;&gt;
+                            &lt;div class=&quot;row&quot;&gt;
+
+                                &lt;div class=&quot;col-xs-9&quot;&gt;
+                                    &lt;div id=&quot;3StepWizardStep1&quot; ng-if=&quot;currentStep3Step==1&quot;&gt;
+                                        &lt;h2 class=&quot;step-title text-primary&quot;&gt;Wizard Step 1&lt;/h2&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                    &lt;/div&gt;
+                                    &lt;div id=&quot;3StepWizardStep2&quot; ng-if=&quot;currentStep3Step==2&quot;&gt;
+                                        &lt;h2 class=&quot;step-title text-primary&quot;&gt;Wizard Step 2&lt;/h2&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                    &lt;/div&gt;
+                                    &lt;div id=&quot;3StepWizardStep3&quot; ng-if=&quot;currentStep3Step==3&quot;&gt;
+                                        &lt;h2 class=&quot;step-title text-primary&quot;&gt;Wizard Step 3&lt;/h2&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;modal-footer&quot;&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn btn-default text-primary&quot; data-dismiss=&quot;modal&quot;&gt;Cancel&lt;/button&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn btn-default text-primary&quot; ng-disabled=&quot;currentStep3Step == 1&quot; ng-click=&quot;currentStep3Step=currentStep3Step - 1&quot;&gt;&lt;i class=&quot;fa fa-chevron-left&quot;&gt;&lt;/i&gt;&amp;nbsp;Back&lt;/button&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; ng-disabled=&quot;currentStep3Step == 3&quot; ng-click=&quot;currentStep3Step=currentStep3Step + 1&quot;&gt;Next&amp;nbsp;&lt;i class=&quot;fa fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; ng-disabled=&quot;currentStep3Step != 3&quot; data-dismiss=&quot;modal&quot;&gt;Finished&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+
+</code>
+        </pre>

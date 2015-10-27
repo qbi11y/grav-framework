@@ -840,12 +840,55 @@
         <h4>Example</h4>
         <div>
             <!-- example code here -->
+            <button class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#3StepWizardModal">Launch 3 Step Wizard</button>
+
+            <!-- 3 Step Wizard Modal -->
+            <div class="modal fade" id="3StepWizardModal" tabindex="-1" role="dialog" aria-labelledby="3StepWizardModalLabel" aria-hidden="true" ng-init="currentStep3Step = 1">
+                <div class="modal-dialog modal-lg modal-wizard">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="3StepWizardModalLabel">Edit Item</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+
+                                <div class="col-xs-9">
+                                    <div id="3StepWizardStep1" ng-if="currentStep3Step==1">
+                                        <h2 class="step-title text-primary">Wizard Step 1</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="3StepWizardStep2" ng-if="currentStep3Step==2">
+                                        <h2 class="step-title text-primary">Wizard Step 2</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="3StepWizardStep3" ng-if="currentStep3Step==3">
+                                        <h2 class="step-title text-primary">Wizard Step 3</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default text-primary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-default text-primary" ng-disabled="currentStep3Step == 1" ng-click="currentStep3Step=currentStep3Step - 1"><i class="fa fa-chevron-left"></i>&nbsp;Back</button>
+                            <button type="button" class="btn btn-primary" ng-disabled="currentStep3Step == 3" ng-click="currentStep3Step=currentStep3Step + 1">Next&nbsp;<i class="fa fa-chevron-right"></i></button>
+                            <button type="button" class="btn btn-primary" ng-disabled="currentStep3Step != 3" data-dismiss="modal">Finished</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <h4>Code Snippet</h4>
         <div ng-controller="TabsCtrl">
             <tabset>
                 <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                    <ng-include src="'views/includes/components-wizard-3step-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
@@ -858,13 +901,71 @@
         <p>Use modals when users attention needs to be focused on the task at hand. Modals disable other actions outside of the modal until the modal is closed. Do not spawn modals from an existing modal.</p>
         <h4>Example</h4>
         <div>
-            <!-- example code here -->
+            <button class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#wizardModal">Launch Multistep Wizard</button>
+       
+                 <!-- Wizard Modal -->
+            <div class="modal fade" id="wizardModal" tabindex="-1" role="dialog" aria-labelledby="wizardModalLabel" aria-hidden="true" ng-init="currentStep = 1">
+                <div class="modal-dialog modal-lg modal-wizard">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="wizardModalLabel">Edit Item</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <ul class="nav nav-pills nav-stacked text-nowrap">
+                                        <li role="presentation" ng-class="active: {currentStep == 1}"><a href="#" ng-click="currentStep = 1" ng-class="{'text-muted': currentStep > 1, 'text-primary': currentStep < 1}">Wizard Step 1<i ng-if="currentStep == 1" class="fa fa-chevron-right"></i></a></li>
+                                        <li role="presentation" ng-class="active: {currentStep == 2}"><a href="#" ng-click="currentStep = 2" ng-class="{'text-muted': currentStep > 2, 'text-primary': currentStep < 2}">Wizard Step 2<i ng-if="currentStep == 2" class="fa fa-chevron-right"></i></a></li>
+                                        <li role="presentation" ng-class="active: {currentStep == 3}"><a href="#" ng-click="currentStep = 3" ng-class="{'text-muted': currentStep > 3, 'text-primary': currentStep < 3}">Wizard Step 3<i ng-if="currentStep == 3" class="fa fa-chevron-right"></i></a></li>
+                                        <li role="presentation" ng-class="active: {currentStep == 4}"><a href="#" ng-click="currentStep = 4" ng-class="{'text-muted': currentStep > 4, 'text-primary': currentStep < 4}">Wizard Step 4<i ng-if="currentStep == 4" class="fa fa-chevron-right"></i></a></li>
+                                        <li role="presentation" ng-class="active: {currentStep == 5}"><a href="#" ng-click="currentStep = 5" ng-class="{'text-muted': currentStep > 5, 'text-primary': currentStep < 5}">Wizard Step 5<i ng-if="currentStep == 5" class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div id="wizardStep1" ng-if="currentStep==1">
+                                        <h2 class="step-title text-primary">Wizard Step 1</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="wizardStep2" ng-if="currentStep==2">
+                                        <h2 class="step-title text-primary">Wizard Step 2</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="wizardStep3" ng-if="currentStep==3">
+                                        <h2 class="step-title text-primary">Wizard Step 3</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="wizardStep4" ng-if="currentStep==4">
+                                        <h2 class="step-title text-primary">Wizard Step 4</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                    <div id="wizardStep5" ng-if="currentStep==5">
+                                        <h2 class="step-title text-primary">Wizard Step 5</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc commodo finibus accumsan. Duis in sapien quis magna pretium volutpat in id nisl. Praesent eu eros eget odio cursus porta vel ac mauris. Donec imperdiet sapien eu nulla iaculis gravida. Vestibulum rutrum purus vel odio tempor, id scelerisque tortor elementum. Sed ac lacus eget risus pharetra tempus. In sed magna nec ex placerat malesuada.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default text-primary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-default text-primary" ng-disabled="currentStep == 1" ng-click="currentStep=currentStep - 1"><i class="fa fa-chevron-left"></i>&nbsp;Back</button>
+                            <button type="button" class="btn btn-primary" ng-disabled="currentStep == 5" ng-click="currentStep=currentStep + 1">Next&nbsp;<i class="fa fa-chevron-right"></i></button>
+                            <button type="button" class="btn btn-primary" ng-disabled="currentStep != 5" data-dismiss="modal">Finished</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <h4>Code Snippet</h4>
         <div ng-controller="TabsCtrl">
             <tabset>
                 <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                    <ng-include src="'views/includes/components-wizard-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
