@@ -20,6 +20,7 @@
                 <li><a ng-click="scrollTo('modal')">Modal</a></li>
                 <li><a ng-click="scrollTo('wizard')">Wizard Modal ( &lt;= 3 steps )</a></li>
                 <li><a ng-click="scrollTo('wizard_3')">Wizard Modal ( &gt; 3 steps )</a></li>
+                <li><a ng-click="scrollTo('listitempill')">List Item Pill</a></li>
             </ul>
         </div>
     </div>
@@ -966,6 +967,36 @@
             <tabset>
                 <tab heading="HTML">&nbsp;
                     <ng-include src="'views/includes/components-wizard-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region List Item Pill -->
+        <h2 id="listitempill">List Item Pill</h2>
+        <p></p>
+        <h4>Example</h4>
+        <div>
+         
+            <div class="well well-list-item">
+                <p>Line 1</p>
+                <p>Line 2</p>
+                <p>Line 3</p>
+                <p>Line 4</p>
+                <p>Line 5</p>
+                <p>Line 6</p>
+                <div class="vertical-divider"></div>
+                <div class="fa fa-angle-right fa-2x"></div>
+            </div>
+
+        </div>
+        <h4>Code Snippet</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-listitempill-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>

@@ -1,4 +1,4 @@
-///#source 1 1 /js/src/bootstrap.js
+///#source 1 1 /templates/js/src/bootstrap.js
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

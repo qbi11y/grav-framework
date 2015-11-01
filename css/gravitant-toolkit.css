@@ -7503,6 +7503,30 @@ table.table thead tr th.st-sort-descent:after {
 .modal-wizard .step-title {
   margin-top: 0;
 }
+/*List Item Well*/
+.well.well-list-item {
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  position: relative;
+}
+.well.well-list-item .vertical-divider {
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border-left: 1px solid #ddd;
+}
+.well.well-list-item .fa.fa-angle-right {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px;
+}
 /*
     All Theme Options moved to gravitant-toolkit-alt.less 
     This file is for the "default" theme.
