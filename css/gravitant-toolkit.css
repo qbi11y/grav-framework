@@ -5987,7 +5987,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 800px;
     margin: 30px auto;
   }
   .modal-content {
@@ -7460,6 +7460,10 @@ table.table thead tr th.st-sort-descent:after {
 .modal-header {
   background-color: #2c71c9;
   color: #ffffff;
+}
+.modal-header .close {
+  color: #ffffff;
+  opacity: 1;
 }
 /*Masthead*/
 .navbar-default {

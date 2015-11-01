@@ -822,12 +822,42 @@
         <h4>Example</h4>
         <div>
             <!-- example code here -->
+            <button class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#standardModal">Launch Modal</button>
+
+            <!-- Standard Modal -->
+            <div class="modal fade" id="standardModal" tabindex="-1" role="dialog" aria-labelledby="standardModalLabel" aria-hidden="true" ng-init="currentStep3Step = 1">
+                <div class="modal-dialog modal-wizard">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="standardModalLabel">Standard Modal</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+
+                                <div class="col-xs-6">
+                                    Column 1
+                                </div>
+
+                                <div class="col-xs-6">
+                                    Column 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default text-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <h4>Code Snippet</h4>
         <div ng-controller="TabsCtrl">
             <tabset>
                 <tab heading="HTML">&nbsp;
-                    <ng-include src="'views/includes/components-collapsiblesection-html.html'"></ng-include>
+                    <ng-include src="'views/includes/components-modal-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
@@ -903,8 +933,8 @@
         <h4>Example</h4>
         <div>
             <button class="btn btn-primary" data-backdrop="static" data-toggle="modal" data-target="#wizardModal">Launch Multistep Wizard</button>
-       
-                 <!-- Wizard Modal -->
+
+            <!-- Wizard Modal -->
             <div class="modal fade" id="wizardModal" tabindex="-1" role="dialog" aria-labelledby="wizardModalLabel" aria-hidden="true" ng-init="currentStep = 1">
                 <div class="modal-dialog modal-lg modal-wizard">
                     <div class="modal-content">
@@ -979,7 +1009,7 @@
         <p></p>
         <h4>Example</h4>
         <div>
-         
+
             <div class="well well-list-item">
                 <p>Line 1</p>
                 <p>Line 2</p>
