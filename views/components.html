@@ -21,6 +21,7 @@
                 <li><a ng-click="scrollTo('wizard')">Wizard Modal ( &lt;= 3 steps )</a></li>
                 <li><a ng-click="scrollTo('wizard_3')">Wizard Modal ( &gt; 3 steps )</a></li>
                 <li><a ng-click="scrollTo('listitempill')">List Item Pill</a></li>
+                <li><a ng-click="scrollTo('tabs')">Tabs</a></li>
             </ul>
         </div>
     </div>
@@ -1027,6 +1028,49 @@
             <tabset>
                 <tab heading="HTML">&nbsp;
                     <ng-include src="'views/includes/components-listitempill-html.html'"></ng-include>
+                </tab>
+                <tab heading="Angular">&nbsp;Angular</tab>
+                <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
+            </tabset>
+        </div>
+        <!--#endregion-->
+
+        <!--#region Tabs -->
+        <h2 id="tabs">Tabs</h2>
+        <p></p>
+        <h4>Example</h4>
+        <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab 1</a></li>
+                <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab n</a></li>
+                <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab n</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+
+                    <p>Content for Tab 1</p>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab2">
+                    <p>Content for Tab n</p>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab3">
+                    <p>Content for Tab n</p>
+                </div>
+                
+            </div>
+
+
+        </div>
+        <h4>Code Snippet</h4>
+        <div ng-controller="TabsCtrl">
+            <tabset>
+                <tab heading="HTML">&nbsp;
+                    <ng-include src="'views/includes/components-tabs-html.html'"></ng-include>
                 </tab>
                 <tab heading="Angular">&nbsp;Angular</tab>
                 <tab heading="Thymeleaf">&nbsp;Thymeleaf</tab>
