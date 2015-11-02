@@ -1,0 +1,56 @@
+﻿        &lt;section class=&quot;container&quot; ng-init=&quot;viewmodel.formMode='login'&quot;&gt;
+
+            &lt;h1 ng-if=&quot;viewmodel.formMode === 'login'&quot;&gt;Login&lt;/h1&gt;
+            &lt;h1 ng-if=&quot;viewmodel.formMode === 'signup'&quot;&gt;Sign Up&lt;/h1&gt;
+
+            &lt;div class=&quot;well clearfix&quot;&gt;
+
+                &lt;form class=&quot;form-horizontal text-center&quot;&gt;
+                    &lt;div class=&quot;form-group&quot; ng-if=&quot;viewmodel.formMode === 'signup'&quot;&gt;
+                        &lt;div class=&quot;col-xs-offset-2 col-xs-8&quot;&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Enter First Name&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot; ng-if=&quot;viewmodel.formMode === 'signup'&quot;&gt;
+                        &lt;div class=&quot;col-xs-offset-2 col-xs-8&quot;&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Enter Last Name&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;div class=&quot;col-xs-offset-2 col-xs-8&quot;&gt;
+                            &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter Email&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;div class=&quot;col-xs-offset-2 col-xs-8&quot;&gt;
+                            &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;password&quot; placeholder=&quot;Enter Password&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-group&quot; ng-if=&quot;viewmodel.formMode === 'signup'&quot;&gt;
+                        &lt;div class=&quot;col-xs-offset-2 col-xs-8&quot;&gt;
+                            &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;confirmPassword&quot; placeholder=&quot;Confirm Password&quot;&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+
+            &lt;/div&gt;
+            &lt;ul class=&quot;list-unstyled text-center&quot;&gt;
+                &lt;li ng-if=&quot;viewmodel.formMode === 'login'&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary&quot;&gt;Log In&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li ng-if=&quot;viewmodel.formMode === 'signup'&quot;&gt;
+                    &lt;button class=&quot;btn btn-primary&quot;&gt;Sign Up&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;button class=&quot;btn btn-link&quot; ng-if=&quot;viewmodel.formMode === 'login'&quot; ng-click=&quot;viewmodel.formMode = 'signup'&quot;&gt;Sign Up&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;button class=&quot;btn btn-link&quot; ng-if=&quot;viewmodel.formMode === 'signup'&quot; ng-click=&quot;viewmodel.formMode = 'login'&quot;&gt;Log In&lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;button class=&quot;btn btn-link&quot;&gt;Forgot Password&lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+
+        &lt;/section&gt;
